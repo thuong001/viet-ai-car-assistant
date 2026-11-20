@@ -4,7 +4,7 @@ export async function onRequestPost({ request, env }) {
     const messages = body.messages || [];
 
     const result = await env.AI.run(
-      '@cf/meta/llama-3.1-8b-instruct',
+      '@cf/openai/gpt-oss-20b',
       {
         messages,
         max_tokens: 500
